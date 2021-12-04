@@ -1,11 +1,10 @@
-import pandas
 import pandas as pd
 
 data = pd.read_csv('input.txt', header=None, dtype=str)
 data = data[0].apply(lambda x: pd.Series(list(x)))
 
 
-def get_data_rating(df: pandas.DataFrame, mode: str) -> int:
+def get_data_rating(df: pd.DataFrame, mode: str) -> int:
     if mode == 'max':
         common_value = '1'
     elif mode == 'min':
